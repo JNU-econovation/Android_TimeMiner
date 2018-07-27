@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+
+    <ProgressBar
+        android:id="@+id/goalProgressBar"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:max="100"
+        android:progress="70"
+        android:progressTint="#00bf00" />
+
+    <TextView
+        android:id="@+id/goalCumTime"
+        android:layout_gravity="right"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:paddingRight="20dp"
+        android:paddingTop="3dp"
+        android:paddingBottom="1dp"
+        android:layout_margin="5dp"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:text="누적시간 : 05:37"
+        android:textColor="#000000"
+        tools:ignore="RtlHardcoded,RtlSymmetry" />
+
+    <TextView
+        android:id="@+id/goalLastTime"
+        android:layout_gravity="right"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:paddingRight="20dp"
+        android:paddingTop="3dp"
+        android:paddingBottom="1dp"
+        android:layout_margin="5dp"
+        android:layout_width="wrap_content"
+        android:textColor="#000000"
+        android:layout_height="match_parent"
+        android:text="목표 달성까지 남은 시간 : 03:22"
+        />
+
+    <TextView
+        android:textColor="#000000"
+        android:id="@+id/percent"
+        android:layout_gravity="right"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:paddingRight="20dp"
+        android:paddingTop="3dp"/>
+
+</LinearLayout>

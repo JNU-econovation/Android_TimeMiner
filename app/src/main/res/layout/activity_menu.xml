@@ -1,0 +1,235 @@
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:focusableInTouchMode="true">
+
+<RelativeLayout
+    android:background="#FDF5DC"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <LinearLayout
+        android:id="@+id/title"
+        android:background="#323C73"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center">
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="23dp"
+            android:textColor="#FDF5DC"
+            android:layout_marginBottom="23dp"
+            android:text="새로운 목표"
+            android:textSize="20dp" />
+
+    </LinearLayout>
+    
+
+
+    <EditText
+        android:id="@+id/editText"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/title"
+        android:layout_centerHorizontal="true"
+        android:ems="10"
+        android:gravity="center"
+        android:hint="목표 이름"
+        android:inputType="textPersonName" />
+
+    <View
+        android:id="@+id/line_beloweditText"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:background="#323C73"
+        android:layout_below="@+id/editText"/>
+
+    <LinearLayout
+        android:id="@+id/date"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:paddingTop="20dp"
+        android:orientation="vertical"
+        android:layout_below="@+id/line_beloweditText"
+        android:layout_marginBottom="10dp">
+
+
+        <TextView
+            android:id="@+id/date_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:gravity="center"
+            android:textColor="#323C73"
+            android:text="시작 날짜" />
+
+        <View
+            android:layout_marginTop="5dp"
+            android:layout_width="70dp"
+            android:layout_height="1dp"
+            android:background="#323C73" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <DatePicker
+                android:id="@+id/datepick"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_gravity="center"
+                android:calendarViewShown="false"
+                android:datePickerMode="spinner"
+                android:scaleX="0.9"
+                android:scaleY="0.9" />
+
+            <TimePicker
+                android:id="@+id/timepick"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:scaleY="0.1"
+                android:scaleX="0.1"
+                android:layout_marginLeft="-30dp"
+                android:layout_marginRight="-20dp"
+                android:layout_centerHorizontal="true"
+                android:layout_gravity="center"
+                android:timePickerMode="spinner"
+                android:visibility="invisible"/>
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <View
+        android:id="@+id/line_belowdate"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:background="#323C73"
+        android:layout_below="@+id/date"/>
+
+    <LinearLayout
+        android:id="@+id/goaltime"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:paddingTop="20dp"
+        android:layout_marginBottom="10dp"
+        android:layout_below="@+id/line_belowdate">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:gravity="center"
+            android:textColor="#323C73"
+            android:text="목표 시간" />
+
+        <View
+            android:layout_marginTop="5dp"
+            android:layout_width="70dp"
+            android:layout_height="1dp"
+            android:background="#323C73" />
+
+
+        <LinearLayout
+            android:id="@+id/lay"
+            android:paddingTop="15dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            //시
+            <NumberPicker
+                android:id="@+id/hr"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="100dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:gravity="center_vertical"
+                android:text=" : "
+                android:textSize="45dp" />
+
+
+            //분
+
+            <NumberPicker
+                android:id="@+id/min"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+    <View
+        android:id="@+id/line_belowgoaltime"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:background="#323C73"
+        android:layout_below="@+id/goaltime"/>
+
+    <LinearLayout
+        android:id="@+id/choice"
+        android:paddingTop="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginBottom="30dp"
+        android:layout_below="@+id/goaltime">
+
+
+
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_below="@id/choice"
+        android:layout_alignParentStart="true"
+        android:orientation="horizontal">
+
+
+        <Button
+            android:id="@+id/button2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="#FDF5DC"
+
+            android:layout_weight="1"
+            android:onClick="onButton1Clicked"
+            android:text="취소" />
+
+        <Button
+            android:id="@+id/button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="#FDF5DC"
+            android:onClick="onClick2"
+            android:text="저장" />
+    </LinearLayout>
+
+</RelativeLayout>
+</ScrollView>
